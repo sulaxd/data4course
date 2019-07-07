@@ -1,0 +1,1 @@
+read.csv("../Day1-R語言與資料科學/臺灣內閣.csv") %>% dplyr::filter(性別=="F")

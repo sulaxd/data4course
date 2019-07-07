@@ -1,0 +1,3 @@
+aggregate(性別~職稱, data=read.csv("../Day1-R語言與資料科學/臺灣內閣.csv"), function(u){
+  (u=="M") %>% {sum(.)/length(.)}
+})

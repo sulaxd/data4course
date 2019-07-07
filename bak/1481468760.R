@@ -1,0 +1,9 @@
+a=round(1/3*sum(titanic.raw$Survived=="Yes"))
+b=round(1/3*sum(titanic.raw$Survived=="No"))
+a;b
+set.seed(1)
+sub=strata(titanic.raw,stratanames="Survived",size=c(b,a),method="srswor")
+table(sub$AgeGroup)
+Train_titanic=titanic.raw[-sub$ID_unit,]
+Test_titanic=titanic.raw[sub$ID_unit,]
+nrow(Train_titanic);nrow(Test_titanic)

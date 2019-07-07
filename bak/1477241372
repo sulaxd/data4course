@@ -1,0 +1,3 @@
+iris_sd <- aggregate(iris[,1:4], by=list(Species=iris$Species), FUN=sd)
+df_sd <- melt(iris_sd, id.vars="Species", variable.name="Features", value.name="Values")
+temp_sd <- dcast(df_sd, Species ~ Features, value.var="Values")

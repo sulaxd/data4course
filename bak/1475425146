@@ -1,0 +1,8 @@
+results <- data.frame() # for gathering results 
+for (species in unique(iris$Species)) { # How smart it is !
+  tmp <- subset(iris, Species==species) # get subset here
+  count <- nrow(tmp)
+  mean <- mean(tmp$Sepal.Length)
+  median <- median(tmp$Sepal.Length)
+  results <- rbind(results, data.frame(species, count, mean, median))
+} 

@@ -1,0 +1,5 @@
+read.csv("../Day1-R語言與資料科學/臺灣內閣.csv") %>% 
+  ddply('職稱', function(x) {
+    tmp <- table(x$性別)
+    c(男=tmp[['M']], 女=tmp[['F']])
+})

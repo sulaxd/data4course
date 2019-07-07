@@ -1,0 +1,1 @@
+cbind(count=tapply(iris$Sepal.Length, iris$Species, FUN=length), mean=tapply(iris$Sepal.Length, iris$Species, FUN=mean), median=tapply(iris$Sepal.Length, iris$Species, FUN=median))

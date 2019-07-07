@@ -1,0 +1,10 @@
+iris.complete <- iris.test[complete.cases(iris.test),]
+cor(iris.complete[-5]) #相關係數
+lm(Petal.Width ~ Petal.Length, data=iris.complete)
+index <- is.na(iris.test$Petal.Width) & !is.na(iris.test$Petal.Length)
+((-0.3622 + 0.4064 * iris.test[index,'Petal.Length']) - iris[index,'Petal.Width']) %>% mean
+
+lm.fit <- lm(Petal.Length ~ Petal.Width, data=iris.complete)
+index <- !is.na(iris.test$Petal.Width) & is.na(iris.test$Petal.Length)
+new <- data.frame(Petal.Width=iris.test$Petal.Width[index])
+(predict(lm.fit, new) - iris[index,'Petal.Length']) %>% mean

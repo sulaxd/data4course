@@ -1,0 +1,2 @@
+tmp.tbl <- data.table(read.csv("../Day1-R語言與資料科學/臺灣內閣.csv"))
+tmp.tbl[,list(男=sum(性別=='M'),女=sum(性別=='F')), by=職稱]
