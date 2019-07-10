@@ -1,1 +1,6 @@
-I have a pen. I have an apple. Apple-pen! I have a pen. I have a pineapple. Pineapple-pen! Apple-pen. Pineapple-pen. Pen-Pineapple-Apple-Pen.
+I have a pen.
+I have an apple.
+Apple-pen! I have a pen.
+I have a pineapple. Pineapple-pen!
+Apple-pen. Pineapple-pen.
+Pen-Pineapple-Apple-Pen.
